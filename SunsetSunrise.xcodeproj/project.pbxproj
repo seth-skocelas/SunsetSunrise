@@ -7,21 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0E7D580AD52A79DB84FFA2 /* Pods_SunsetSunrise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AD7D201D08CC5CBDB5D9BD /* Pods_SunsetSunrise.framework */; };
 		974436E2204C877E008BE29A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974436E1204C877E008BE29A /* AppDelegate.swift */; };
-		974436E4204C877E008BE29A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974436E3204C877E008BE29A /* ViewController.swift */; };
+		974436E4204C877E008BE29A /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974436E3204C877E008BE29A /* MainVC.swift */; };
 		974436E7204C877E008BE29A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974436E5204C877E008BE29A /* Main.storyboard */; };
 		974436E9204C877E008BE29A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 974436E8204C877E008BE29A /* Assets.xcassets */; };
 		974436EC204C877E008BE29A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 974436EA204C877E008BE29A /* LaunchScreen.storyboard */; };
+		974436F4204C9009008BE29A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974436F3204C9009008BE29A /* Constants.swift */; };
+		974436F6204C91B2008BE29A /* SunTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974436F5204C91B2008BE29A /* SunTimes.swift */; };
+		974436FA204D0931008BE29A /* String+convertUTCtoLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974436F9204D0931008BE29A /* String+convertUTCtoLocal.swift */; };
+		974436FC204D1205008BE29A /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 974436FB204D1205008BE29A /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		974436DE204C877E008BE29A /* SunsetSunrise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunsetSunrise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		974436E1204C877E008BE29A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		974436E3204C877E008BE29A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		974436E3204C877E008BE29A /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		974436E6204C877E008BE29A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		974436E8204C877E008BE29A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		974436EB204C877E008BE29A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		974436ED204C877E008BE29A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		974436F3204C9009008BE29A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		974436F5204C91B2008BE29A /* SunTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunTimes.swift; sourceTree = "<group>"; };
+		974436F9204D0931008BE29A /* String+convertUTCtoLocal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+convertUTCtoLocal.swift"; sourceTree = "<group>"; };
+		974436FB204D1205008BE29A /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		BE6B2B7CD96222A136FA8D51 /* Pods-SunsetSunrise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunsetSunrise.release.xcconfig"; path = "Pods/Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise.release.xcconfig"; sourceTree = "<group>"; };
+		C664573857204DB7C8637FBB /* Pods-SunsetSunrise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunsetSunrise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise.debug.xcconfig"; sourceTree = "<group>"; };
+		F2AD7D201D08CC5CBDB5D9BD /* Pods_SunsetSunrise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunsetSunrise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +41,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F0E7D580AD52A79DB84FFA2 /* Pods_SunsetSunrise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C07465998A6967A03A56D4D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2AD7D201D08CC5CBDB5D9BD /* Pods_SunsetSunrise.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		85A90A251D27FF128D90854C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C664573857204DB7C8637FBB /* Pods-SunsetSunrise.debug.xcconfig */,
+				BE6B2B7CD96222A136FA8D51 /* Pods-SunsetSunrise.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		974436D5204C877E008BE29A = {
 			isa = PBXGroup;
 			children = (
 				974436E0204C877E008BE29A /* SunsetSunrise */,
 				974436DF204C877E008BE29A /* Products */,
+				85A90A251D27FF128D90854C /* Pods */,
+				2C07465998A6967A03A56D4D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +87,15 @@
 			isa = PBXGroup;
 			children = (
 				974436E1204C877E008BE29A /* AppDelegate.swift */,
-				974436E3204C877E008BE29A /* ViewController.swift */,
+				974436E3204C877E008BE29A /* MainVC.swift */,
 				974436E5204C877E008BE29A /* Main.storyboard */,
 				974436E8204C877E008BE29A /* Assets.xcassets */,
 				974436EA204C877E008BE29A /* LaunchScreen.storyboard */,
 				974436ED204C877E008BE29A /* Info.plist */,
+				974436F3204C9009008BE29A /* Constants.swift */,
+				974436F5204C91B2008BE29A /* SunTimes.swift */,
+				974436F9204D0931008BE29A /* String+convertUTCtoLocal.swift */,
+				974436FB204D1205008BE29A /* Location.swift */,
 			);
 			path = SunsetSunrise;
 			sourceTree = "<group>";
@@ -71,9 +107,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 974436F0204C877E008BE29A /* Build configuration list for PBXNativeTarget "SunsetSunrise" */;
 			buildPhases = (
+				25E1B310C8A6A58E977D9C59 /* [CP] Check Pods Manifest.lock */,
 				974436DA204C877E008BE29A /* Sources */,
 				974436DB204C877E008BE29A /* Frameworks */,
 				974436DC204C877E008BE29A /* Resources */,
+				7F61B613A607B186940B37AF /* [CP] Embed Pods Frameworks */,
+				1984DE2A833001A9F36C4D73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +170,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1984DE2A833001A9F36C4D73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		25E1B310C8A6A58E977D9C59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SunsetSunrise-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F61B613A607B186940B37AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SunsetSunrise/Pods-SunsetSunrise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		974436DA204C877E008BE29A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				974436E4204C877E008BE29A /* ViewController.swift in Sources */,
+				974436FA204D0931008BE29A /* String+convertUTCtoLocal.swift in Sources */,
+				974436E4204C877E008BE29A /* MainVC.swift in Sources */,
+				974436F6204C91B2008BE29A /* SunTimes.swift in Sources */,
 				974436E2204C877E008BE29A /* AppDelegate.swift in Sources */,
+				974436FC204D1205008BE29A /* Location.swift in Sources */,
+				974436F4204C9009008BE29A /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +369,7 @@
 		};
 		974436F1204C877E008BE29A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C664573857204DB7C8637FBB /* Pods-SunsetSunrise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +385,7 @@
 		};
 		974436F2204C877E008BE29A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE6B2B7CD96222A136FA8D51 /* Pods-SunsetSunrise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
