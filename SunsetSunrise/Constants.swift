@@ -9,11 +9,11 @@
 import Foundation
 
 let BASE_URL = "https://api.sunrise-sunset.org/json?"
-let LATITUDE = "lat=32.7808320"
-let LONGITUDE = "&lng=-96.7993290"
+let LATITUDE = "lat="
+let LONGITUDE = "&lng="
 let DATE = "&date="
 let FORMATTING = "&formatted=0"
 
 typealias DownloadComplete = () -> ()
 
-let MAIN_URL = "\(BASE_URL)\(LATITUDE)\(LONGITUDE)\(FORMATTING)"
+let MAIN_URL = "\(BASE_URL)\(LATITUDE)\(Location.sharedInstance.latitude!)\(LONGITUDE)\(Location.sharedInstance.longitude!)\(FORMATTING)"
