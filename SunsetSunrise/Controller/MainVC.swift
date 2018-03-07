@@ -24,6 +24,7 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
     var currentSunTimes: SunTimes!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         locationManager.delegate = self
@@ -38,10 +39,8 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
         super.viewDidAppear(animated)
         locationAuthStatus()
         
-        
     }
 
-    
     func locationAuthStatus() {
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {

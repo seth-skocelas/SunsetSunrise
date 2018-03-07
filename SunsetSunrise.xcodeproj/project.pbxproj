@@ -86,18 +86,50 @@
 		974436E0204C877E008BE29A /* SunsetSunrise */ = {
 			isa = PBXGroup;
 			children = (
+				974436FD20509A22008BE29A /* Model */,
+				974436FE20509A38008BE29A /* View */,
+				974436FF20509A45008BE29A /* Controller */,
+				9744370020509A76008BE29A /* Extension */,
 				974436E1204C877E008BE29A /* AppDelegate.swift */,
-				974436E3204C877E008BE29A /* MainVC.swift */,
 				974436E8204C877E008BE29A /* Assets.xcassets */,
 				974436E5204C877E008BE29A /* Main.storyboard */,
 				974436EA204C877E008BE29A /* LaunchScreen.storyboard */,
 				974436ED204C877E008BE29A /* Info.plist */,
 				974436F3204C9009008BE29A /* Constants.swift */,
-				974436F5204C91B2008BE29A /* SunTimes.swift */,
-				974436F9204D0931008BE29A /* String+convertUTCtoLocal.swift */,
-				974436FB204D1205008BE29A /* Location.swift */,
 			);
 			path = SunsetSunrise;
+			sourceTree = "<group>";
+		};
+		974436FD20509A22008BE29A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				974436F5204C91B2008BE29A /* SunTimes.swift */,
+				974436FB204D1205008BE29A /* Location.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		974436FE20509A38008BE29A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		974436FF20509A45008BE29A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				974436E3204C877E008BE29A /* MainVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9744370020509A76008BE29A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				974436F9204D0931008BE29A /* String+convertUTCtoLocal.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
