@@ -64,11 +64,32 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e4Q-IP-onY">
+                                <rect key="frame" x="41" y="633" width="293" height="24"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The data displayed above is provided by:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FlH-CC-Kpg">
+                                        <rect key="frame" x="0.0" y="0.0" width="197" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gga-ho-yzj">
+                                        <rect key="frame" x="202" y="0.0" width="91" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <state key="normal" title="sunrise-sunset.org"/>
+                                        <connections>
+                                            <action selector="referenceLinkPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Uo-8U-IYr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.041435810116701055" green="0.76475735589665472" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="xoT-RF-3bV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OJD-FA-MJE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e4Q-IP-onY" secondAttribute="bottom" constant="10" id="b25-0r-5Ua"/>
                             <constraint firstItem="xoT-RF-3bV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gBe-jm-Frd"/>
+                            <constraint firstItem="e4Q-IP-onY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xlF-Dd-wZX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -80,6 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
         </scene>
     </scenes>
 </document>

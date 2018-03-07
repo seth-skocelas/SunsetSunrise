@@ -71,6 +71,12 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
         
     }
 
-
+    @IBAction func referenceLinkPressed(_ sender: Any) {
+        
+        let url = URL(string: "https://sunrise-sunset.org")
+        UIApplication.shared.open(url!)
+        
+    }
+    
 }
 
