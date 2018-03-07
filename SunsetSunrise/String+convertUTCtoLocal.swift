@@ -10,7 +10,7 @@ import Foundation
 
 extension String {
     
-    func convertUTCtoLocal() -> String {
+    func convertUTCtoLocal(dateFormatterString: String) -> String {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
@@ -18,7 +18,7 @@ extension String {
         if let date = dateFormatter.date(from: self) {
             
             dateFormatter.dateFormat = "h:mm a"
-            dateFormatter.timeZone = TimeZone.current
+            dateFormatter.timeZone = TimeZone.autoupdatingCurrent
             
             return dateFormatter.string(from: date)
         }

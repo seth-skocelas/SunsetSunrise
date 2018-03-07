@@ -88,8 +88,8 @@
 			children = (
 				974436E1204C877E008BE29A /* AppDelegate.swift */,
 				974436E3204C877E008BE29A /* MainVC.swift */,
-				974436E5204C877E008BE29A /* Main.storyboard */,
 				974436E8204C877E008BE29A /* Assets.xcassets */,
+				974436E5204C877E008BE29A /* Main.storyboard */,
 				974436EA204C877E008BE29A /* LaunchScreen.storyboard */,
 				974436ED204C877E008BE29A /* Info.plist */,
 				974436F3204C9009008BE29A /* Constants.swift */,

@@ -14,7 +14,7 @@ class SunTimes {
     var _sunriseTime: String!
     var _sunsetTime: String!
     var _solarNoon: String!
-    var _dayLength: String!
+    var _dayLength: Int!
     
     var sunriseTime: String {
         if _sunriseTime == nil {
@@ -37,9 +37,9 @@ class SunTimes {
         return _solarNoon
     }
     
-    var dayLength: String {
+    var dayLength: Int {
         if _dayLength == nil {
-            return ""
+            return 0
         }
         return _dayLength
     }
@@ -60,19 +60,19 @@ class SunTimes {
                     
                     if let sunset = suntimeResults["sunset"] as? String {
                         
-                        self._sunsetTime = String(sunset.dropLast(6)).convertUTCtoLocal()
+                        self._sunsetTime = String(sunset.dropLast(6)).convertUTCtoLocal(dateFormatterString: "yyyy-MM-dd'T'HH:mm:ss")
                         
                     }
                     
                     if let sunrise = suntimeResults["sunrise"] as? String {
-                        self._sunriseTime = String(sunrise.dropLast(6)).convertUTCtoLocal()
+                        self._sunriseTime = String(sunrise.dropLast(6)).convertUTCtoLocal(dateFormatterString: "yyyy-MM-dd'T'HH:mm:ss")
                     }
                     
                     if let solarNoonTime = suntimeResults["solar_noon"] as? String {
-                        self._solarNoon = String(solarNoonTime.dropLast(6)).convertUTCtoLocal()
+                        self._solarNoon = String(solarNoonTime.dropLast(6)).convertUTCtoLocal(dateFormatterString: "yyyy-MM-dd'T'HH:mm:ss")
                     }
                     
-                    if let dayLengthTime = suntimeResults["day_length"] as? String {
+                    if let dayLengthTime = suntimeResults["day_length"] as? Int {
                         self._dayLength = dayLengthTime
                     }
                     

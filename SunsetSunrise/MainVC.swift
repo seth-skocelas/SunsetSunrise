@@ -16,6 +16,7 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var sunriseTime: UILabel!
     @IBOutlet weak var sunsetTime: UILabel!
     @IBOutlet weak var solarNoonTime: UILabel!
+    @IBOutlet weak var dayLengthLbl: UILabel!
     
     let locationManager = CLLocationManager()
     var currentLocation: CLLocation!
@@ -45,14 +46,7 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
             
-            currentLocation = locationManager.location
-            
-            Location.sharedInstance.latitude = currentLocation.coordinate.latitude
-            Location.sharedInstance.longitude = currentLocation.coordinate.longitude
-            
-            currentSunTimes.downloadSunTimeDetails {
-                self.updateUI()
-            }
+            locationManager.startUpdatingLocation()
             
         } else {
             
@@ -68,6 +62,8 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
         self.sunsetTime.text = self.currentSunTimes._sunsetTime
         self.sunriseTime.text = self.currentSunTimes._sunriseTime
         self.solarNoonTime.text = self.currentSunTimes._solarNoon
+        let (h, m) = secondsToHoursMinutes(seconds: self.currentSunTimes._dayLength)
+        self.dayLengthLbl.text = "That means you'll get about \(h) hours and \(m) minutes of sunlight today."
         
     }
 
@@ -76,6 +72,25 @@ class MainVC: UIViewController, CLLocationManagerDelegate {
         let url = URL(string: "https://sunrise-sunset.org")
         UIApplication.shared.open(url!)
         
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        currentLocation = locationManager.location
+        
+        Location.sharedInstance.latitude = currentLocation.coordinate.latitude
+        Location.sharedInstance.longitude = currentLocation.coordinate.longitude
+        
+        currentSunTimes.downloadSunTimeDetails {
+            self.updateUI()
+        }
+        
+        locationManager.stopUpdatingLocation()
+        
+    }
+    
+    func secondsToHoursMinutes (seconds: Int) -> (Int, Int) {
+        return (seconds/3600, (seconds % 3600)/60)
     }
     
 }
